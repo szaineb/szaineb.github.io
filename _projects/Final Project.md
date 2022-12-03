@@ -11,51 +11,44 @@ custom_js:
 ---
 
 
-# Example including vega-lite
+# Hate Crimes in New York City (2021)
 
-Example comes from this [great blog post right here](https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html) that was also used in [our test import script](https://github.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/blob/main/week01/test_imports_week01.ipynb).
 
-We can use a vegachart HTML tag like so:
+In this article, we will look into the hate crimes or bias motivated incidents in the New York City (NYC) during 2021. 
 
-```
-<vegachart schema-url="{{ site.baseurl }}/assets/json/NYPD_hate_crime_dashboard.json" style="width: 100%"></vegachart>
-```
+According to data provided by New York Police Department (NYPD), a total of 572 hate crimes were reported across NYC police precincts. Around 37% of these incidents had anti-jewish bias motivations.
+
+The chart below presents the top 5 bias motivations behind hate crimes in NYC in the year 2021.
+
 <vegachart schema-url="{{ site.baseurl }}/assets/json/NYPD_Bias_Motives_Top5.json" style="width: 100%"></vegachart>
+
+Majority of the hate crimes occurred in Manhattan South borough and Staten Island had the least number of hate crimes reported. 
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/NYPD_Patrol_Boroughs.json" style="width: 100%"></vegachart>
 
+The charts below presents an overview of the hate crime complaints filed in various New York City police precincts in the year 2021. The map is color coded by the number of hate crime complaints filed. Lighter yellow shades represent lower number of crimes while brightest orange red color depicts highest number of crime complaints. On the right, there is a bar chart that shows count of complaints by 'Bias Motiviations'. Hover over the map to get details about police precinct, patrol borough and number of complaints filed. The distribution of incidents occurred in different precincts across various bias motivations can be seen by selecting precincts on map. To select more than one precinct, use Shift+Left Click. Click any where around map to reset.
+
+In addition to Jews, Asian, Gay and Black population have also been the target of hate crimes in NYC. 
+
 <vegachart schema-url="{{ site.baseurl }}/assets/json/NYPD_hate_crime_dashboard.json" style="width: 100%"></vegachart>
 
+Since NYC and Chicago are often compared for crime rates, let's have a look at hate crimes in Chicago as well. Based on open data from Chicago Police Department, Chicago had a lower hate crime rate as compared to New York City in 2021. Total 109 complaints were filed. Majority of these incidents had anti-Gay and anti-Black motivations. 
+
+The chart below presents the Top 5 bias motivations behind hate crimes in Chicago. 
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/Chicago_Top5_Motives.json" style="width: 100%"></vegachart>
 
+Austin and Near North Side community areas had the most occurrences of these incidents.
 
 <vegachart schema-url="{{ site.baseurl }}/assets/json/Chicago_Top5_Communities.json" style="width: 100%"></vegachart>
 
-In theory, you can also use [Jekyll hooks](https://jekyllrb.com/docs/plugins/hooks/) to do it, but I haven't figured out a way that looks nice yet.
+Although there is a difference in the total number and rates of hate crimes reported in New York City and Chicago, there are similarities in the victim groups being targeted in both the cities.
 
-
-## Search The Data & Methods
-
-Below is where we can put some links to both the data and the analysis code as buttons:
-
-```
 <div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
+{% include elements/button.html link="https://github.com/szaineb/szaineb.github.io/tree/master/data" text="The Data" %}
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://blog.4dcu.be/programming/2021/05/03/Interactive-Visualizations.html" text="The Analysis" %}
-</div>
-```
-
-<!-- these are written in a combo of html and liquid --> 
-
-<div class="left">
-{% include elements/button.html link="https://github.com/vega/vega/blob/main/docs/data/cars.json" text="The Data" %}
-</div>
-
-<div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/szaineb/szaineb.github.io/blob/master/python_notebooks/zaineb-syedarija-final-project-part3.ipynb" text="The Analysis" %}
 </div>
 
